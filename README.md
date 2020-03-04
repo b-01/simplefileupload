@@ -1,5 +1,6 @@
 # simplefileupload
-File sharing platform written in Java/Vaadin
+File sharing platform written in Java/Vaadin.
+The project is archived, outdated and not maintained.
 
 ## Setup
 
