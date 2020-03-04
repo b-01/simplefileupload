@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<comment>Properties file for simplefileuploadfrontend</comment>
+
+	<!-- Set this path to the parent folder, where you want the files to be 
+		stored. No trailing forward/backward slash! -->
+	<entry key="storage.root_directory">/opt</entry>
+	<!-- The directory where the files should be stored No leading forward/backward 
+		slash! -->
+	<entry key="storage.storage_directory">storage</entry>
+	<entry key="db.username">filesuser</entry>
+	<entry key="db.password">RyuthBolf9quink</entry>
+	<entry key="url.base">https://files.x07.at/f/</entry>
+</properties>

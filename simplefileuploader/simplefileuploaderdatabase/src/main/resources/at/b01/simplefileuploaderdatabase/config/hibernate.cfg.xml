@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- Standard Config -->
+		<property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+		<property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/filesdb</property>
+		<property name="hibernate.default_schema">public</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+		<!-- Set this TRUE if debugging is enabled!! -->
+		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</property>
+		<property name="hibernate.current_session_context_class">thread</property>
+		<property name="hibernate.jdbc.batch_size">75</property>
+		<property name="hibernate.order_inserts">true</property>
+		<property name="hibernate.order_updates">true</property>
+		<property name="hibernate.jdbc.batch_versioned_data">true</property>
+		<!-- configuration pool via c3p0 -->
+		<property name="connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>
+		<property name="c3p0.acquire_increment">1</property>
+		<property name="c3p0.idle_test_period">100</property> <!-- seconds -->
+		<property name="c3p0.max_size">100</property>
+		<property name="c3p0.max_statements">0</property>
+		<property name="c3p0.min_size">10</property>
+		<property name="c3p0.timeout">100</property> <!-- seconds -->
+		<!-- MappingFiles -->
+		<mapping resource="at/b01/simplefileuploaderdatabase/config/Storage.hbm.xml" />
+		<mapping resource="at/b01/simplefileuploaderdatabase/config/User.hbm.xml" />
+
+
+
+
+	</session-factory>
+</hibernate-configuration>

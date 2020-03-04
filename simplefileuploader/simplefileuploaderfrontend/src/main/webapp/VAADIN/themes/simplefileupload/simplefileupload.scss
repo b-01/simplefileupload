@@ -1,0 +1,92 @@
+/* Import the reindeer theme. */
+/* This only allows us to use the mixins defined in it and does not add any styles by itself. */
+@import "../reindeer/reindeer.scss";
+
+/* This contains all of your theme. */
+/* If somebody wants to extend the theme she will include this mixin. */
+@mixin simplefileupload {
+	/* Include all the styles from the reindeer theme */
+	@include reindeer;
+
+	$border-radius: 8px;
+	$application-background-color: #D6E0F5;
+	$views-background-color: white;
+
+	.views_generic_design {
+		background-color: $views-background-color;
+		-webkit-border-radius: $border-radius;
+		-moz-border-radius: $border-radius;
+		border-radius: $border-radius;
+	}
+  
+	.view_generic_header {
+		.header-label {
+			font-family: Verdana, Geneva, sans-serif;
+			font-size: 28px;
+			color: darkblue;
+			line-height: normal;
+		}
+		
+		.icon-size {
+			width: 16px;
+			height: 16px;
+		}
+	}
+  
+  	.view_generic_header.v-margin-left   {padding-left:   10px;}
+	.view_generic_header.v-margin-right  {padding-right:  10px;}
+	.view_generic_header.v-margin-top    {padding-top:    10px;}
+	.view_generic_header.v-margin-bottom {padding-bottom: 10px;}
+ 
+  	.view_main {
+  		background-color: $application-background-color;
+  	}
+  
+	.view_welcome {
+		.layout_welcome {
+			background-color: $views-background-color;
+			-webkit-border-radius: $border-radius;
+			-moz-border-radius: $border-radius;
+			border-radius: $border-radius;
+		
+  			background: url(img/filestorage.jpg);
+			background-repeat: no-repeat;
+			background-position: center center; 
+  		}
+	
+		.v-nativebutton-button-request-download {
+			background-image: -webkit-linear-gradient($application-background-color, lightgrey); /* For Safari 5.1 to 6.0 */
+			background-image: -o-linear-gradient($application-background-color, lightgrey); /* For Opera 11.1 to 12.0 */
+			background-image: -moz-linear-gradient($application-background-color, lightgrey); /* For Firefox 3.6 to 15 */
+			background-image: linear-gradient($application-background-color, lightgrey); /* Standard syntax (must be last) */
+					
+			box-shadow: 5px 5px 5px black;			
+		
+			-webkit-border-radius: $border-radius;
+			-moz-border-radius: $border-radius;
+			border-radius: $border-radius;
+			
+			border:2px solid white;
+			
+			.v-nativebutton-caption {
+				white-space: normal;
+				font-size: 2em;
+			}
+		}
+	}
+  
+  
+/*
+	.view_admin {
+	}
+	
+	.view_download {
+	}
+	
+	.view_overview {
+	}	
+	
+	.view_upload {
+	}
+*/
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="at.b01.simplefileuploaderdatabase.entities.Storage"
+		table="STORAGE">
+		<id name="uid" type="java.lang.String">
+			<column name="FILE_UID" length="45" />
+		</id>
+		<property name="userid" type="java.lang.Long">
+			<column name="USER_ID" />
+		</property>
+
+		<property name="name" type="java.lang.String">
+			<column name="FILE_NAME" length="260" />
+		</property>
+	</class>
+
+	<query name="findFilecountByUserid">
+        <![CDATA[select count(*) from Storage s where s.userid = :id]]>
+	</query>
+
+	<query name="findFilesByUserid">
+        <![CDATA[from Storage s where s.userid = :id]]>
+	</query>
+
+	<query name="removeFileById">
+        <![CDATA[delete from Storage s where s.uid = :storageid]]>
+	</query>
+
+</hibernate-mapping>
